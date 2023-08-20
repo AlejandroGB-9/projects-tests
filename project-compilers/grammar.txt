@@ -1,0 +1,13 @@
+Axioma -> (Expression)
+Expression -> Operando OpExpression
+OpExpression -> Parametro Parametro | (Expression)
+Parametro -> Numero
+Operando -> + | - | * | / |
+
+Simplified
+
+A -> (E)
+E -> O E'
+E' -> P P | (E)
+P -> N
+O -> + | - | * | / |

@@ -1,0 +1,45 @@
+data;
+
+/*Los sets que se necesitan para el modelo*/
+
+/*Este es el set en relación a todos los vértices del grafo*/
+set RUTAS:= P S1 S2 S3 SC; 
+
+/*Este es para poder indetificar el punto de partida, que es necesario para ciertas restricciones*/
+set PARKING:= P;
+
+/*Aqui separamos las paradas de el origen y el punto de llegada*/
+set ESTACION:= S1 S2 S3;
+
+/*Este es el punto de llegada, es necesario apartarlo como para parking para ciertas restricciones*/
+set COLE:= SC;
+
+/*Esto son los parámetros para los costes, capacidades y el número de estudiantes existentes*/
+param N_BUSES default 3;
+
+param B_CAP default 20;
+
+param N_ST default 30;
+
+param COST_BUS default 120;
+
+param COST_KM default 5;
+
+/*Estas son las matrices para los estudiantes y los kilometros de un vértice a otro de tal manera que sean bidireccionales*/
+param M_KM : 
+        P S1 S2 S3 SC:=
+    P   9999 8 10 10 9999
+    S1  9999 9999 3 7 6
+    S2  9999 3 9999 5 7
+    S3  9999 7 5 9999 4
+    SC  9999 9999 9999 9999 9999;
+
+param M_ST : 
+        P S1 S2 S3 SC:=
+    P   9999 15 5 10 9999
+    S1  9999 9999 5 10 0
+    S2  9999 15 9999 10 0
+    S3  9999 15 5 9999 0
+    SC  9999 9999 9999 9999 9999;
+
+end;

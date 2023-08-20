@@ -1,0 +1,14 @@
+Explicaciones, que es lo que quieren ver para que expliquemos.
+Como hacer el metodo final y que datos introducirle.
+Que hacer con los 2 ultimos años de disp.
+
+Apartado 8:
+8) (0.25 puntos) Seleccionar el mejor método, evaluarlo, construir modelo final, hacer predicciones para la competición.
+    
+    a. Seleccionar el mejor método de los evaluados en los puntos anteriores.
+    b. Usar la partición de test para evaluar ese mejor método. Esta es una estimación de cómo se
+        desempeñaría el modelo en la competición.
+    c. Entrenar el modelo final. Guardarlo en un fichero (llamado «modelo_final.pkl»).
+    d. Utilizar el modelo final para obtener predicciones para el conjunto de datos de la
+        competición (comp). Guardar estas predicciones en un fichero (llamado
+        «predicciones.csv»).

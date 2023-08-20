@@ -1,0 +1,61 @@
+data;
+
+set RUTAS:= P S1 S2 S3 SC;
+
+set PARKING:= P;
+
+set ESTACION:= S1 S2 S3;
+
+set COLE:= SC;
+
+set ALUMNOS:= A1 A2 A3 A4 A5 A6 A7 A8;
+
+param N_BUSES default 3;
+
+param B_CAP default 4;
+
+param N_ST default 8;
+
+param COST_BUS default 120;
+
+param COST_KM default 5;
+
+param M_KM : 
+        P S1 S2 S3 SC:=
+    P   9999 8 10 10 9999
+    S1  9999 9999 3 7 6
+    S2  9999 3 9999 5 7
+    S3  9999 7 5 9999 4
+    SC  9999 9999 9999 9999 9999;
+
+param M_ST : 
+        P S1 S2 S3 SC:=
+    P   9999 3 2 3 9999
+    S1  9999 9999 2 3 0
+    S2  9999 3 9999 3 0
+    S3  9999 3 2 9999 0
+    SC  9999 9999 9999 9999 9999;
+
+param A_ST :
+        S1 S2 S3:=
+    A1  1 0 0
+    A2  1 0 0
+    A3  1 0 0
+    A4  1 1 1
+    A5  1 1 1
+    A6  0 0 1
+    A7  0 0 1
+    A8  0 0 1;
+
+param A_HERMNS :
+        A1 A2 A3 A4 A5 A6 A7 A8:=
+    A1  0 0 0 0 0 0 0 0
+    A2  0 0 0 0 0 0 0 0
+    A3  0 0 0 0 0 0 0 0
+    A4  0 0 0 0 1 0 0 0
+    A5  0 0 0 1 0 0 0 0
+    A6  0 0 0 0 0 0 0 0
+    A7  0 0 0 0 0 0 0 0
+    A8  0 0 0 0 0 0 0 0;
+    
+end;
